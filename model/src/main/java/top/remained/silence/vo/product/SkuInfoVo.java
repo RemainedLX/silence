@@ -1,6 +1,5 @@
 package top.remained.silence.vo.product;
 
-import com.atguigu.ssyx.model.product.*;
 import top.remained.silence.model.product.SkuAttrValue;
 import top.remained.silence.model.product.SkuImage;
 import top.remained.silence.model.product.SkuInfo;
