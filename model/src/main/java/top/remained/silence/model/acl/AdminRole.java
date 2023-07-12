@@ -1,5 +1,6 @@
 package top.remained.silence.model.acl;
 
+import lombok.Builder;
 import top.remained.silence.model.base.BaseEntity;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -18,6 +19,7 @@ import lombok.Data;
 @Data
 @ApiModel(description = "用户角色")
 @TableName("admin_role")
+@Builder
 public class AdminRole extends BaseEntity {
 	
 	private static final long serialVersionUID = 1L;

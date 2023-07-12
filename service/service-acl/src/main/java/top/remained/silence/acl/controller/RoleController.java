@@ -24,7 +24,7 @@ import java.util.List;
 @CrossOrigin
 public class RoleController {
     @Autowired
-    RoleService roleService;
+    private RoleService roleService;
 
     /**
      * @param: [current 当前页, limit 记录数, queryVo 查询参数]

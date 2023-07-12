@@ -16,7 +16,7 @@ import top.remained.silence.vo.acl.RoleQueryVo;
 @Service
 public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements RoleService {
     @Autowired
-    RoleMapper roleMapper;
+    private RoleMapper roleMapper;
     @Override
     public IPage<Role> getPage(Page<Role> page, RoleQueryVo queryVo) {
         String roleName = queryVo.getRoleName();
