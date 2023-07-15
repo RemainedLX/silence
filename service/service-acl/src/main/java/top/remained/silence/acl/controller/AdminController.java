@@ -96,7 +96,7 @@ public class AdminController {
         return Result.ok(map);
     }
     @ApiOperation("为用户分配角色")
-    @GetMapping("doAssign")
+    @PostMapping("doAssign")
     public Result doAssign(@RequestParam Long adminId,
                            @RequestParam List<Long> roleId) {
       boolean flag = adminRoleService.saveAdminRole(adminId,roleId);

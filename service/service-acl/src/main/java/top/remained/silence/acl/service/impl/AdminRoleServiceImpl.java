@@ -35,9 +35,9 @@ public class AdminRoleServiceImpl extends ServiceImpl<AdminRoleMapper, AdminRole
         List<Role> allRolesList = roleMapper.selectList(null);
         map.put("allRolesList",allRolesList);
         // 用户已有角色
-        List<Long> assignRoles = adminRoleMapper.selectList(
-                new LambdaQueryWrapper<AdminRole>().eq(AdminRole::getAdminId, adminId)).
-                stream().map(AdminRole::getRoleId).collect(Collectors.toList());
+        List<AdminRole> assignRoles = adminRoleMapper.selectList(
+                new LambdaQueryWrapper<AdminRole>().eq(AdminRole::getAdminId, adminId));
+//                stream().map(AdminRole::getRoleId).collect(Collectors.toList());
         map.put("assignRoles",assignRoles);
         return map;
     }
@@ -47,7 +47,7 @@ public class AdminRoleServiceImpl extends ServiceImpl<AdminRoleMapper, AdminRole
         // 删除
         List<AdminRole> adminRoles = adminRoleMapper.selectList(new LambdaQueryWrapper<AdminRole>().eq(AdminRole::getAdminId, adminId));
         if (!CollectionUtils.isEmpty(adminRoles)) {
-            adminRoleMapper.deleteBatchIds(adminRoles);
+            adminRoleMapper.deleteBatchIds(adminRoles.stream().map(AdminRole::getId).collect(Collectors.toList()));
         }
         // 重新分配
         roleId.forEach(r ->
