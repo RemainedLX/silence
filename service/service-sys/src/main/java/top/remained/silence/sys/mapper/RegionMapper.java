@@ -8,8 +8,8 @@ import top.remained.silence.model.sys.Region;
  * 地区表 Mapper 接口
  * </p>
  *
- * @author lx
- * @since 2023-07-18
+ * @author atguigu
+ * @since 2023-04-03
  */
 public interface RegionMapper extends BaseMapper<Region> {
 

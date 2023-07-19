@@ -8,8 +8,8 @@ import top.remained.silence.model.sys.Ware;
  * 仓库表 服务类
  * </p>
  *
- * @author lx
- * @since 2023-07-18
+ * @author atguigu
+ * @since 2023-04-03
  */
 public interface WareService extends IService<Ware> {
 

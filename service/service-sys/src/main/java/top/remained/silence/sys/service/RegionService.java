@@ -3,14 +3,18 @@ package top.remained.silence.sys.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import top.remained.silence.model.sys.Region;
 
+import java.util.List;
+
 /**
  * <p>
  * 地区表 服务类
  * </p>
  *
- * @author lx
- * @since 2023-07-18
+ * @author atguigu
+ * @since 2023-04-03
  */
 public interface RegionService extends IService<Region> {
 
+    //根据区域关键字查询区域列表信息
+    List<Region> getRegionByKeyword(String keyword);
 }

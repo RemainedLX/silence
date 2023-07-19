@@ -8,8 +8,8 @@ import top.remained.silence.model.sys.Ware;
  * 仓库表 Mapper 接口
  * </p>
  *
- * @author lx
- * @since 2023-07-18
+ * @author atguigu
+ * @since 2023-04-03
  */
 public interface WareMapper extends BaseMapper<Ware> {
 
