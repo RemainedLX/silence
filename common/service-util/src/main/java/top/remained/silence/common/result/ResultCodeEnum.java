@@ -26,6 +26,7 @@ public enum ResultCodeEnum {
     ILLEGAL_CALLBACK_REQUEST_ERROR( 217, "非法回调请求"),
     FETCH_ACCESSTOKEN_FAILD( 218, "获取accessToken失败"),
     FETCH_USERINFO_ERROR( 219, "获取用户信息失败"),
+    FILE_UP_ERROR( 300, "文件上传是失败"),
 
 
     SKU_LIMIT_ERROR(230, "购买个数不能大于限购个数"),
